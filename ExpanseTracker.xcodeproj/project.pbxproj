@@ -6,19 +6,97 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EA67FDA02CE91D4300C91F62 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA67FD5A2CE919B800C91F62 /* WidgetKit.framework */; };
+		EA67FDA12CE91D4300C91F62 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA67FD5C2CE919B800C91F62 /* SwiftUI.framework */; };
+		EA67FDAC2CE91D4500C91F62 /* StatsCardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EA67FD9F2CE91D4200C91F62 /* StatsCardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA67FDAA2CE91D4500C91F62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EACF61B32CE7E54800C77E3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA67FD9E2CE91D4200C91F62;
+			remoteInfo = StatsCardExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA67FD732CE919BA00C91F62 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EA67FDAC2CE91D4500C91F62 /* StatsCardExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		EA67FD5A2CE919B800C91F62 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		EA67FD5C2CE919B800C91F62 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		EA67FD9F2CE91D4200C91F62 /* StatsCardExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StatsCardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA67FDBA2CE91E9200C91F62 /* StatsCardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StatsCardExtension.entitlements; sourceTree = "<group>"; };
 		EACF61BB2CE7E54800C77E3A /* ExpanseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpanseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EA67FDAD2CE91D4500C91F62 /* Exceptions for "StatsCard" folder in "StatsCardExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = EA67FD9E2CE91D4200C91F62 /* StatsCardExtension */;
+		};
+		EA67FDB22CE91D5C00C91F62 /* Exceptions for "ExpanseTracker" folder in "StatsCardExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Helpers/Constants.swift,
+				"Helpers/Date+Extensions.swift",
+				"Helpers/View+Extensions.swift",
+				Model/Category.swift,
+				Model/TintColor.swift,
+				Model/Transaction.swift,
+				View/Helpers/CardView.swift,
+				View/Helpers/FilterTransactionsView.swift,
+			);
+			target = EA67FD9E2CE91D4200C91F62 /* StatsCardExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		EA67FDA22CE91D4300C91F62 /* StatsCard */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EA67FDAD2CE91D4500C91F62 /* Exceptions for "StatsCard" folder in "StatsCardExtension" target */,
+			);
+			path = StatsCard;
+			sourceTree = "<group>";
+		};
 		EACF61BD2CE7E54800C77E3A /* ExpanseTracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EA67FDB22CE91D5C00C91F62 /* Exceptions for "ExpanseTracker" folder in "StatsCardExtension" target */,
+			);
 			path = ExpanseTracker;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA67FD9C2CE91D4200C91F62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA67FDA12CE91D4300C91F62 /* SwiftUI.framework in Frameworks */,
+				EA67FDA02CE91D4300C91F62 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EACF61B82CE7E54800C77E3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +107,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA67FD592CE919B800C91F62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA67FD5A2CE919B800C91F62 /* WidgetKit.framework */,
+				EA67FD5C2CE919B800C91F62 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EACF61B22CE7E54800C77E3A = {
 			isa = PBXGroup;
 			children = (
+				EA67FDBA2CE91E9200C91F62 /* StatsCardExtension.entitlements */,
 				EACF61BD2CE7E54800C77E3A /* ExpanseTracker */,
+				EA67FDA22CE91D4300C91F62 /* StatsCard */,
+				EA67FD592CE919B800C91F62 /* Frameworks */,
 				EACF61BC2CE7E54800C77E3A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				EACF61BB2CE7E54800C77E3A /* ExpanseTracker.app */,
+				EA67FD9F2CE91D4200C91F62 /* StatsCardExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +139,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EA67FD9E2CE91D4200C91F62 /* StatsCardExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA67FDAE2CE91D4500C91F62 /* Build configuration list for PBXNativeTarget "StatsCardExtension" */;
+			buildPhases = (
+				EA67FD9B2CE91D4200C91F62 /* Sources */,
+				EA67FD9C2CE91D4200C91F62 /* Frameworks */,
+				EA67FD9D2CE91D4200C91F62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EA67FDA22CE91D4300C91F62 /* StatsCard */,
+			);
+			name = StatsCardExtension;
+			packageProductDependencies = (
+			);
+			productName = StatsCardExtension;
+			productReference = EA67FD9F2CE91D4200C91F62 /* StatsCardExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		EACF61BA2CE7E54800C77E3A /* ExpanseTracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EACF61C92CE7E54A00C77E3A /* Build configuration list for PBXNativeTarget "ExpanseTracker" */;
@@ -55,10 +168,12 @@
 				EACF61B72CE7E54800C77E3A /* Sources */,
 				EACF61B82CE7E54800C77E3A /* Frameworks */,
 				EACF61B92CE7E54800C77E3A /* Resources */,
+				EA67FD732CE919BA00C91F62 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EA67FDAB2CE91D4500C91F62 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				EACF61BD2CE7E54800C77E3A /* ExpanseTracker */,
@@ -80,6 +195,9 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					EA67FD9E2CE91D4200C91F62 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					EACF61BA2CE7E54800C77E3A = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -100,11 +218,19 @@
 			projectRoot = "";
 			targets = (
 				EACF61BA2CE7E54800C77E3A /* ExpanseTracker */,
+				EA67FD9E2CE91D4200C91F62 /* StatsCardExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EA67FD9D2CE91D4200C91F62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EACF61B92CE7E54800C77E3A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +241,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA67FD9B2CE91D4200C91F62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EACF61B72CE7E54800C77E3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +257,71 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EA67FDAB2CE91D4500C91F62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA67FD9E2CE91D4200C91F62 /* StatsCardExtension */;
+			targetProxy = EA67FDAA2CE91D4500C91F62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		EA67FDAF2CE91D4500C91F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StatsCardExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BVPC6QX93W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StatsCard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StatsCard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rickyprimay.ExpanseTracker.StatsCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA67FDB02CE91D4500C91F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StatsCardExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BVPC6QX93W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StatsCard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StatsCard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rickyprimay.ExpanseTracker.StatsCard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		EACF61C72CE7E54A00C77E3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -249,12 +446,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ExpanseTracker/ExpanseTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpanseTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = BVPC6QX93W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = DESCRIPTION;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -278,12 +477,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ExpanseTracker/ExpanseTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpanseTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = BVPC6QX93W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = DESCRIPTION;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,6 +506,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA67FDAE2CE91D4500C91F62 /* Build configuration list for PBXNativeTarget "StatsCardExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA67FDAF2CE91D4500C91F62 /* Debug */,
+				EA67FDB02CE91D4500C91F62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EACF61B62CE7E54800C77E3A /* Build configuration list for PBXProject "ExpanseTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

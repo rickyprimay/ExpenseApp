@@ -13,5 +13,6 @@ struct ExpanseTrackerApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [Transaction.self])
     }
 }
